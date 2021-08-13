@@ -1,0 +1,240 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.eventosPesca.controller.MasterPage1" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <Page title="Lista de Mareas" showHeader="true" showFooter="true" showNavButton="false">
+        <content>
+            <form:Form width="100%" editable="true" visible="true">
+                <form:title/>
+                <form:formContainers>
+                    <form:FormContainer visible="true">
+                        <form:formElements>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Tipo Embarcacion" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                        <items>
+                                            <core:Item text="Embarcacion de Cerco" enabled="true" key="Embarcacion de Cerco"/>
+                                            <core:Item text="Embarcaciones de Arrastre" enabled="true" key="Embarcaciones de Arrastre"/>
+                                            <core:Item text="Embarcaciones Palangrera" enabled="true" key="Embarcaciones Palangrera"/>
+                                        </items>
+                                    </ComboBox>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Planta" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                        <items>
+                                            <core:Item text="Malabrigo" enabled="true" key="Malabrigo"/>
+                                            <core:Item text="Chimbote" enabled="true" key="Chimbote"/>
+                                            <core:Item text="Samanco" enabled="true" key="Samanco"/>
+                                        </items>
+                                    </ComboBox>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Buscar" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                        <form:title/>
+                    </form:FormContainer>
+                </form:formContainers>
+                <form:layout>
+                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                </form:layout>
+            </form:Form>
+            <IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="true" visible="true" selectedKey="Ok">
+                <items>
+                    <IconTabFilter icon="sap-icon://project-definition-triangle-2" iconColor="Positive" text="Propios" count="10" design="Horizontal" showAll="true" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <List mode="SingleSelectMaster" width="100%" headerText="" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="5" growingScrollToLoad="true" visible="true">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar/>
+                                <items>
+                                    <ObjectListItem intro="Pesca CHI" title="0000171435" icon="sap-icon://task" number="" numberUnit="" numberState="None" type="Navigation" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="TASA 413" active="false" visible="true"/>
+                                            <ObjectAttribute text="PESC" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="Abierto" state="Success" icon="sap-icon://status-completed" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Pesca CHI" title="0000171436" icon="sap-icon://task" number="" numberUnit="" numberState="None" type="Navigation" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="TASA 417" active="false" visible="true"/>
+                                            <ObjectAttribute text="NAVP" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="Cerrado" state="Error" icon="sap-icon://status-error" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="No Zarpe" title="0000171437" icon="sap-icon://task" number="" numberUnit="" numberState="None" type="Navigation" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="TASA 418" active="false" visible="true"/>
+                                            <ObjectAttribute text="PESC" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="Abierto" state="Success" icon="sap-icon://status-completed" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="No Zarpe" title="0000171438" icon="sap-icon://task" number="" numberUnit="" numberState="None" type="Navigation" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="TASA 413" active="false" visible="true"/>
+                                            <ObjectAttribute text="PUER" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="Cerrado" state="Error" icon="sap-icon://status-error" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Pesca CHI" title="0000171439" icon="sap-icon://task" number="" numberUnit="" numberState="None" type="Navigation" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="TASA 413" active="false" visible="true"/>
+                                            <ObjectAttribute text="PUER" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="Abierto" state="Success" icon="sap-icon://status-completed" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Pesca CHI" title="0000171440" icon="sap-icon://task" number="" numberUnit="" numberState="None" type="Navigation" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="TASA 55" active="false" visible="true"/>
+                                            <ObjectAttribute text="PUER" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="Cerrado" state="Error" icon="sap-icon://status-error" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Pesca CHI" title="0000171441" icon="sap-icon://task" number="" numberUnit="" numberState="None" type="Navigation" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="TASA 61" active="false" visible="true"/>
+                                            <ObjectAttribute text="PUER" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="Abierto" state="Success" icon="sap-icon://status-completed" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Pesca CHI" title="0000171442" icon="sap-icon://task" number="" numberUnit="" numberState="None" type="Navigation" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="TASA 413" active="false" visible="true"/>
+                                            <ObjectAttribute text="PUER" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="Cerrado" state="Error" icon="sap-icon://status-error" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Pesca CHI" title="0000171443" icon="sap-icon://task" number="" numberUnit="" numberState="None" type="Navigation" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="TASA 427" active="false" visible="true"/>
+                                            <ObjectAttribute text="PUER" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="Abierto" state="Success" icon="sap-icon://status-completed" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Zarpe" title="0000171444" icon="sap-icon://task" number="" numberUnit="" numberState="None" type="Navigation" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="TASA 60" active="false" visible="true"/>
+                                            <ObjectAttribute text="PESC" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="Cerrado" state="Error" icon="sap-icon://status-error" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabSeparator icon="" iconDensityAware="false"/>
+                    <IconTabFilter icon="sap-icon://rhombus-milestone-2" iconColor="Neutral" text="Terceros" count="5" design="Horizontal" showAll="true" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <List mode="SingleSelectMaster" width="100%" headerText="" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar/>
+                                <items>
+                                    <ObjectListItem intro="Intro." title="Item 1" number="1,000" numberUnit="USD" numberState="None" type="Active" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Attribute 1" active="false" visible="true"/>
+                                            <ObjectAttribute text="Attribute 2" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="Status 1" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus>
+                                            <ObjectStatus text="Status 2" state="None" visible="true"/>
+                                        </secondStatus>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Intro." title="Item 2" number="2,000" numberUnit="USD" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Attribute 1" active="false" visible="true"/>
+                                            <ObjectAttribute text="Attribute 2" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="Status 1" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus>
+                                            <ObjectStatus text="Status 2" state="None" visible="true"/>
+                                        </secondStatus>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Intro." title="Item 3" number="3,000" numberUnit="USD" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Attribute 1" active="false" visible="true"/>
+                                            <ObjectAttribute text="Attribute 2" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="Status 1" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus>
+                                            <ObjectStatus text="Status 2" state="None" visible="true"/>
+                                        </secondStatus>
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+                        </content>
+                    </IconTabFilter>
+                </items>
+                <content/>
+            </IconTabBar>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="" type="Emphasized" icon="sap-icon://add" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                    <Button text="" type="Emphasized" icon="sap-icon://refresh" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="" type="Emphasized" icon="sap-icon://write-new" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+    </Page>
+</mvc:View>
